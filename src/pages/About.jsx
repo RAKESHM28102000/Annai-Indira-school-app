@@ -130,7 +130,7 @@ export default function About() {
           </h2>
 
           <p className="text-white mb-4">
-            Established in 1989 by our respected founder,<strong> Deivathiru Mr. S. P. Nateashan</strong>, Annai Indira School has grown from humble beginnings into a close-knit educational community that spans generations.Today, we take immense pride in our family of over <strong> 2,000 alumni </strong>who continue to inspire our students through their achievements across diverse fields. What we cherish most is the deep trust placed in us by families, many of whom are now entrusting us with the education of their own children, the next generation of our alumni.At Annai Indira School, we are more than an institution. We are a continuing legacy of belonging, shared values, and meaningful growth.
+            Established in 1989 by our respected founder,<strong> Deivathiru Mr. S. P. Nateashan, M.A.,M.Ed.,</strong>, Annai Indira School has grown from humble beginnings into a close-knit educational community that spans generations.Today, we take immense pride in our family of over <strong> 2,000 alumni </strong>who continue to inspire our students through their achievements across diverse fields. What we cherish most is the deep trust placed in us by families, many of whom are now entrusting us with the education of their own children, the next generation of our alumni.At Annai Indira School, we are more than an institution. We are a continuing legacy of belonging, shared values, and meaningful growth.
           </p>
         </div>
       </section>
