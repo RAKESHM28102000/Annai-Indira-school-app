@@ -1,6 +1,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState  } from "react";
+import { NavLink } from "react-router-dom";
 import React from "react";
 import {
   FaSchool,
@@ -30,7 +31,7 @@ const SectionTitle = ({ title, subtitle }) => (
 const Card = ({ icon, title, desc }) => (
   <div
     data-aos="zoom-in"
-    className="bg-[#1f2937] p-6 rounded-xl text-center 
+    className="bg-[#1f2937] p-6 rounded-xl text-center backdrop-blur-xl ring-2 ring-pink-500
                transition-all duration-300 hover:scale-105 
                hover:bg-[#2d3748] hover:shadow-2xl cursor-pointer"
   >
@@ -137,13 +138,23 @@ export default function Home() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-4">
-              <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
-                Admissions Open
-              </button>
-
-              <button className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">
-                Learn More
-              </button>
+              <NavLink
+                    to="/contact"
+                    className="px-6 py-3 rounded-full font-semibold text-black 
+                               bg-gradient-to-r from-yellow-300 to-yellow-500
+                               hover:from-yellow-400 hover:to-yellow-600
+                               hover:scale-105 hover:shadow-lg
+                               transition duration-300"
+                  >
+                    Admissions Open
+             </NavLink>
+               <NavLink
+                    to="/about"
+                    className="px-6 py-3 rounded-full font-semibold text-white  border border-white
+                               hover:bg-white hover:text-black hover:scale-105 hover:shadow-lg transition duration-300"
+                  >
+                    Learn More 
+              </NavLink>
             </div>
           </div>
 
@@ -151,7 +162,7 @@ export default function Home() {
           <img
             data-aos="fade-left"
             src="/images/stud_act1.jpg"
-            className="rounded-2xl shadow-2xl hover:scale-105 transition duration-500"
+            className="rounded-2xl shadow-2xl ring-2 ring-white hover:scale-105 transition duration-500"
           />
         </div>
       </section>
@@ -181,11 +192,10 @@ export default function Home() {
           subtitle="Numbers that define our journey"
         />
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          <StatCard value="2000+" label="Students" />
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <StatCard value="2000+" label="Alumni" />
           <StatCard value="35+" label="Years of Excellence" />
           <StatCard value="1000+" label="Books" />
-          <StatCard value="Alumni" label="Strong Network" />
         </div>
       </section>
 
@@ -201,10 +211,14 @@ export default function Home() {
         <p className="text-gray-200 mb-6 text-sm md:text-base">
           Join us today and shape your child’s future with quality education
         </p>
-
-        <button className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:scale-110 transition">
-          Join Us Today!
-        </button>
+        <NavLink
+          to="/contact"
+          className="inline-block px-8 py-3 rounded-full font-semibold text-white 
+                     bg-gradient-to-r from-[#7F00FF] to-[#E100FF] 
+                     hover:scale-110 hover:shadow-xl 
+                     transition duration-300">
+             Join Us Today!
+        </NavLink>
       </section>
 
     </div>

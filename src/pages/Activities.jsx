@@ -106,11 +106,11 @@ export default function Activities() {
       <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 px-4 md:px-16 py-16">
 
         {/* COUNTERS */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          <CounterCard number={500} label="Students" />
-          <CounterCard number={50} label="Teachers" />
-          <CounterCard number={20} label="Programs" />
-        </div>
+        {/* <div className="grid md:grid-cols-3 gap-8 mb-20"> */}
+          {/* <CounterCard number={500} label="Students" /> */}
+          {/* <CounterCard number={50} label="Teachers" /> */}
+          {/* <CounterCard number={20} label="Programs" /> */}
+        {/* </div> */}
 
         {/* Academic */}
         <SectionTitle title="Academic Programs" />

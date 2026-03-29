@@ -42,7 +42,7 @@ const GlassCard = ({ icon, title, desc }) => (
   <div
     data-aos="zoom-in"
     className="backdrop-blur-lg bg-white/10 border border-white/20 
-               p-6 rounded-2xl shadow-xl 
+               p-6 rounded-2xl shadow-xl ring-2 ring-pink-500
                hover:scale-105 hover:shadow-2xl transition duration-300"
   >
     <div className="text-yellow-300 text-2xl mb-3">{icon}</div>
@@ -84,12 +84,11 @@ export default function About() {
   }, []);
 
   const students = useCountUp(2000);
-  const teachers = useCountUp(50);
   const years = useCountUp(35);
   const awards = useCountUp(25);
 
   return (
-    <div className="text-white scroll-smooth bg-[#36064D]">
+    <div className="text-white scroll-smooth backdrop-blur-3xl bg-gradient-to-br from-gray-900 via-black to-gray-900 ">
 
       {/* Sticky Nav */}
       <SectionNav />
@@ -99,18 +98,18 @@ export default function About() {
         className="relative h-[80vh] flex items-center justify-center text-center px-4"
         style={{
           backgroundImage:
-            "url('/images/bg2.jpg')",
+            "url('/images/bg5.jpg')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 "></div>
 
-        <div data-aos="fade-up" className="relative z-10 max-w-3xl">
-          <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-            About Annai Indira School
-          </h1>
+        <div data-aos="fade-up" className="relative z-10 max-w-3xl bg-black/60 rounded-2xl">
+           <h1 className="text-3xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+          About Annai Indira School
+        </h1>
           <p className="mt-4 text-gray-200 text-sm md:text-base">
             A legacy of excellence in education, discipline, and holistic development since 1989.
           </p>
@@ -121,8 +120,8 @@ export default function About() {
       <section id="about" className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <img
           data-aos="fade-right"
-          src="/images/bench.png"
-          className="rounded-2xl shadow-2xl hover:scale-105 transition duration-500"
+          src="/images/school-1.png"
+          className="rounded-2xl shadow-2xl hover:scale-105 ring-2 ring-pink-500 transition duration-500"
         />
 
         <div data-aos="fade-left">
@@ -143,10 +142,9 @@ export default function About() {
 
       {/* STATS */}
       <section className="py-16 px-6">
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto text-center">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-center">
 
-          <GlassCard icon={<FaUsers />} title={`${students}+`} desc="Students" />
-          <GlassCard icon={<FaChalkboardTeacher />} title={`${teachers}+`} desc="Teachers" />
+          <GlassCard icon={<FaUsers />} title={`${students}+`} desc="Alumni" />
           <GlassCard icon={<FaSchool />} title={`${years}+`} desc="Years" />
           <GlassCard icon={<FaAward />} title={`${awards}+`} desc="Awards" />
 
@@ -159,25 +157,21 @@ export default function About() {
         <GlassCard
           icon={<FaLightbulb />}
           title="Vision"
-          desc="Nurture young minds through education, knowledge and discipline."
+          desc="Our vision is to nurture young minds through education, knowledge and discipline, creating a
+strong foundation for lifelong learning."
         />
 
         <GlassCard
           icon={<FaGlobe />}
           title="Mission"
-          desc="Provide a safe and caring environment focusing on values, confidence, and holistic growth."
+          desc="Our mission is to provide a safe, caring and supportive environment where children can learn
+and grow with confidence."
         />
 
       </section>
 
       {/* DIRECTOR */}
-      <section id="director" className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-
-        <img
-          data-aos="fade-right"
-          src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
-          className="rounded-2xl shadow-2xl hover:scale-105 transition"
-        />
+      <section id="director" className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-1 gap-10 items-center">
 
         <div data-aos="fade-left" className="backdrop-blur-lg bg-white/10 border border-white/20 p-8 rounded-2xl shadow-xl">
           <h2 className="text-2xl font-bold mb-4 text-yellow-300 flex items-center gap-2">
@@ -185,18 +179,30 @@ export default function About() {
           </h2>
 
           <div className="space-y-2 text-gray-300 text-sm md:text-base">
-            <p>Communicative English & Hindi</p>
-            <p>GK and Computer Science</p>
-            <p>Value Education</p>
-            <p>Leadership & competitions</p>
-            <p>Confidence-building activities</p>
+            <p>At Annai Indira School, we envision an educational journey that is both progressive and deeply
+              rooted in enduring values.
+              Our commitment lies in curating a dynamic and contemporary curriculum that integrates
+              Communicative English, Communicative Hindi, General Knowledge, Computer Science and
+              Value Education as core components of early learning. This balanced approach ensures that
+              our students are not only academically competent but also socially aware and grounded in
+              character.
+              We believe that the formative years are pivotal in shaping a child’s confidence and identity.
+              Through thoughtfully designed platforms such as daily prayer presentations, oratorical activities,
+              competitions and sports, we nurture articulate expression, leadership qualities and
+              self-assurance while gently overcoming stage hesitation.
+              Our objective is to develop well-rounded learners - children who are exposed to a wide
+              spectrum of skills and experiences, enabling them to discover their strengths and, in time,
+              pursue their chosen path with clarity and excellence.
+              With a focus on safety, care and individual attention, we strive to create an environment where
+              every child feels secure, valued and inspired to grow.
+              We remain dedicated to shaping confident, responsible and future-ready individuals.</p>
           </div>
         </div>
 
       </section>
 
       {/* PRINCIPAL */}
-      <section id="principal" className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <section id="principal" className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-1 gap-10 items-center">
 
         <div data-aos="fade-right" className="backdrop-blur-lg bg-white/10 border border-white/20 p-8 rounded-2xl shadow-xl order-2 md:order-1">
           <h2 className="text-2xl font-bold mb-4 text-yellow-300 flex items-center gap-2">
@@ -204,21 +210,53 @@ export default function About() {
           </h2>
 
           <div className="space-y-2 text-gray-300 text-sm md:text-base">
-            <p>40+ years of experience</p>
-            <p>Individual attention</p>
-            <p>Discipline & fundamentals</p>
-            <p>Character building</p>
+            <p>With over 40 years of experience in education, I have always believed that every child has the
+              ability to learn and grow when guided with care and patience.
+              At Annai Indira Nursery and Primary School, we create a supportive environment where children
+              feel encouraged, understood and confident in their learning. Each child is given the attention
+              they need to improve, progress and believe in themselves.
+              I strongly believe in building clear fundamentals along with values such as discipline,
+              consistency and self-confidence. With the right guidance, children develop the strength to
+              overcome challenges and move forward with confidence.
+              To me, education is about helping every child grow into a capable and confident individual,
+              ready to face the future with clarity and courage.
+              It is a privilege to guide young learners and be a part of their journey.
+              Mrs. N. Sumathi Preya, B.Sc., B.Ed., M.A., M.Phil.
+              Principal and Correspondent.</p>
           </div>
         </div>
 
-        <img
-          data-aos="fade-left"
-          src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd"
-          className="rounded-2xl shadow-2xl order-1 md:order-2 hover:scale-105 transition"
-        />
-
       </section>
+    {/* //teacher section */}
+      <section id="principal" className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-1 gap-10 items-center">
+             <div data-aos="fade-right" className="backdrop-blur-lg bg-white/10 border border-white/20 p-8 rounded-2xl 
+          shadow-xl order-2 md:order-1">
+               <h2 className="text-2xl font-bold mb-4 text-yellow-300 flex items-center gap-2">
+                 <FaUserGraduate /> Teacher's Message
+               </h2>
+               <div className="space-y-2 text-gray-300 text-sm md:text-base">
+                 <p>
+                                   A Strong Foundation for Lifelong Learning
+                  At Annai Indira Nursery and Primary School, we focus on creating a balanced and enriching
+                  learning experience where every child feels valued, supported and inspired to grow. Our
+                  approach blends academics, skills and values to shape confident learners.
+                  At our school, we are dedicated to helping every student grow, learn and shine. Our aim is not
+                  only to teach but to guide students so they can adapt confidently to any curriculum, including
+                  international ones. We believe that every child has unique talents, and we work closely with
+                  them to bring out their best.
+                  We value our students’ feedback and experiences, using them to improve our teaching and
+                  make learning more engaging and meaningful. As teachers whose own children also study
+                  here, we understand the importance of a safe, caring and supportive environment where
+                  students feel encouraged to explore, ask questions and develop their skills.
+                  Beyond academics, we focus on building confidence, creativity, and a sense of responsibility in
+                  every child. Our goal is to help each student become capable, thoughtful, and ready to face the
+                  world with confidence and curiosity
+                   </p>
+               </div>
+             </div>
+           </section>
 
+ 
       {/* TEACHERS */}
       <section id="teachers" className="py-20 px-6 max-w-6xl mx-auto">
 
