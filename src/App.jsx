@@ -11,6 +11,7 @@ import { FloatingButtons } from "./components/FloatingButtons";
 import Activities from "./pages/Activities";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import Gallery from "./pages/Gallery";
 
 /// Scroll to top on route change
 function ScrollToTop() {
@@ -60,6 +61,7 @@ function AnimatedRoutes() {
         <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
         <Route path="/activities" element={<PageWrapper><Activities /></PageWrapper>} />
         <Route path="/blog" element={<PageWrapper><Blog/></PageWrapper>} />
+        <Route path="/gallery" element={<PageWrapper><Gallery/></PageWrapper>} />
         <Route path="/contact" element={<PageWrapper><Contact/></PageWrapper>} />
       </Routes>
     </AnimatePresence>

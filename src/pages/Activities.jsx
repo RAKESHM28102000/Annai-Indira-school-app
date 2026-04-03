@@ -86,7 +86,7 @@ export default function Activities() {
   );
 
   return (
-    <div className="text-white">
+    <div className="text-white pt-20">
 
       {/* HERO PARALLAX */}
       <div

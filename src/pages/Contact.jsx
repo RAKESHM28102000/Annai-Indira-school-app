@@ -9,7 +9,7 @@ import {
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white px-4 py-16">
+    <div className="min-h-screen pt-20 bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white px-4 py-16">
 
       {/* HERO */}
       <div className="text-center mb-12">

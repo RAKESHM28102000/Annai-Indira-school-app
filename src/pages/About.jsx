@@ -88,7 +88,7 @@ export default function About() {
   const awards = useCountUp(25);
 
   return (
-    <div className="text-white scroll-smooth backdrop-blur-3xl bg-gradient-to-br from-gray-900 via-black to-gray-900 ">
+    <div className="text-white pt-20 scroll-smooth backdrop-blur-3xl bg-gradient-to-br from-gray-900 via-black to-gray-900 ">
 
       {/* Sticky Nav */}
       <SectionNav />
@@ -194,63 +194,112 @@ and grow with confidence."
           </div>
         </div>
 
-      </section>
+      </section>     
+     {/* PRINCIPAL */}
+          <section
+            id="principal"
+            className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center"
+        >
+          {/* IMAGE */}
+                <div data-aos="fade-right" className="flex justify-center w-full">
+                  <img
+                    src="/images/principle.png"
+                    alt="Principal"
+                    className="
+                      w-full 
+                      max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px]
+                      aspect-[3/4] object-cover
+                      rounded-2xl 
+                      shadow-2xl 
+                      ring-2 ring-pink-500
+                      transition duration-500 
+                      hover:scale-105
+                    "
+                  />
+                </div>
 
-      {/* PRINCIPAL */}
-      <section id="principal" className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-1 gap-10 items-center">
+            {/* CONTENT */}
+            <div
+              data-aos="fade-left"
+              className="backdrop-blur-lg bg-white/10 border border-white/20 
+              p-8 rounded-2xl shadow-xl"
+            >
+              <h2 className="text-2xl font-bold mb-4 text-yellow-300 flex items-center gap-2">
+                <FaUserGraduate /> Principal's Message
+              </h2>
 
-        <div data-aos="fade-right" className="backdrop-blur-lg bg-white/10 border border-white/20 p-8 rounded-2xl shadow-xl order-2 md:order-1">
-          <h2 className="text-2xl font-bold mb-4 text-yellow-300 flex items-center gap-2">
-            <FaUserGraduate /> Principal's Message
-          </h2>
+              <div className="space-y-2 text-gray-300 text-sm md:text-base">
+             <p>With over 40 years of experience in education, I have always believed that every child has the
+             ability to learn and grow when guided with care and patience.
+             At Annai Indira Nursery and Primary School, we create a supportive environment where children
+             feel encouraged, understood and confident in their learning. Each child is given the attention
+             they need to improve, progress and believe in themselves.
+             I strongly believe in building clear fundamentals along with values such as discipline,
+             consistency and self-confidence. With the right guidance, children develop the strength to
+             overcome challenges and move forward with confidence.
+             To me, education is about helping every child grow into a capable and confident individual,
+             ready to face the future with clarity and courage.
+             It is a privilege to guide young learners and be a part of their journey.
+             Mrs. N. Sumathi Preya, B.Sc., B.Ed., M.A., M.Phil.
+             Principal and Correspondent.
+                </p>
+              </div>
+            </div>
+          </section>
 
-          <div className="space-y-2 text-gray-300 text-sm md:text-base">
-            <p>With over 40 years of experience in education, I have always believed that every child has the
-              ability to learn and grow when guided with care and patience.
-              At Annai Indira Nursery and Primary School, we create a supportive environment where children
-              feel encouraged, understood and confident in their learning. Each child is given the attention
-              they need to improve, progress and believe in themselves.
-              I strongly believe in building clear fundamentals along with values such as discipline,
-              consistency and self-confidence. With the right guidance, children develop the strength to
-              overcome challenges and move forward with confidence.
-              To me, education is about helping every child grow into a capable and confident individual,
-              ready to face the future with clarity and courage.
-              It is a privilege to guide young learners and be a part of their journey.
-              Mrs. N. Sumathi Preya, B.Sc., B.Ed., M.A., M.Phil.
-              Principal and Correspondent.</p>
-          </div>
-        </div>
-
-      </section>
-    {/* //teacher section */}
-      <section id="principal" className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-1 gap-10 items-center">
-             <div data-aos="fade-right" className="backdrop-blur-lg bg-white/10 border border-white/20 p-8 rounded-2xl 
-          shadow-xl order-2 md:order-1">
-               <h2 className="text-2xl font-bold mb-4 text-yellow-300 flex items-center gap-2">
-                 <FaUserGraduate /> Teacher's Message
-               </h2>
-               <div className="space-y-2 text-gray-300 text-sm md:text-base">
-                 <p>
-                                   A Strong Foundation for Lifelong Learning
-                  At Annai Indira Nursery and Primary School, we focus on creating a balanced and enriching
-                  learning experience where every child feels valued, supported and inspired to grow. Our
-                  approach blends academics, skills and values to shape confident learners.
-                  At our school, we are dedicated to helping every student grow, learn and shine. Our aim is not
-                  only to teach but to guide students so they can adapt confidently to any curriculum, including
-                  international ones. We believe that every child has unique talents, and we work closely with
-                  them to bring out their best.
-                  We value our students’ feedback and experiences, using them to improve our teaching and
-                  make learning more engaging and meaningful. As teachers whose own children also study
-                  here, we understand the importance of a safe, caring and supportive environment where
-                  students feel encouraged to explore, ask questions and develop their skills.
-                  Beyond academics, we focus on building confidence, creativity, and a sense of responsibility in
-                  every child. Our goal is to help each student become capable, thoughtful, and ready to face the
-                  world with confidence and curiosity
-                   </p>
-               </div>
-             </div>
-           </section>
-
+ {/* //teacher section */}
+       <section
+         id="principal"
+         className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center"
+       >
+         {/* IMAGE */}
+<div data-aos="fade-right" className="flex justify-center w-full">
+  <img
+    src="/images/teachers.jpg"
+    alt="Principal"
+    className="
+      w-full 
+      max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px]
+      aspect-[3/4] object-cover
+      rounded-2xl 
+      shadow-2xl 
+      ring-2 ring-pink-500
+      transition duration-500 
+      hover:scale-105
+    "
+  />
+</div>
+             
+         {/* CONTENT */}
+         <div
+           data-aos="fade-left"
+           className="backdrop-blur-lg bg-white/10 border border-white/20 
+           p-8 rounded-2xl shadow-xl"
+         >
+           <h2 className="text-2xl font-bold mb-4 text-yellow-300 flex items-center gap-2">
+             <FaUserGraduate />Teacher's Message
+           </h2>
+             
+           <div className="space-y-2 text-gray-300 text-sm md:text-base">
+          <p>A Strong Foundation for Lifelong Learning
+            At Annai Indira Nursery and Primary School, we focus on creating a balanced and enriching
+            learning experience where every child feels valued, supported and inspired to grow. Our
+            approach blends academics, skills and values to shape confident learners.
+            At our school, we are dedicated to helping every student grow, learn and shine. Our aim is not
+            only to teach but to guide students so they can adapt confidently to any curriculum, including
+            international ones. We believe that every child has unique talents, and we work closely with
+            them to bring out their best.
+            We value our students’ feedback and experiences, using them to improve our teaching and
+            make learning more engaging and meaningful. As teachers whose own children also study
+            here, we understand the importance of a safe, caring and supportive environment where
+            students feel encouraged to explore, ask questions and develop their skills.
+            Beyond academics, we focus on building confidence, creativity, and a sense of responsibility in
+            every child. Our goal is to help each student become capable, thoughtful, and ready to face the
+            world with confidence and curiosity
+             </p>
+           </div>
+         </div>
+       </section>
  
       {/* TEACHERS */}
       <section id="teachers" className="py-20 px-6 max-w-6xl mx-auto">
