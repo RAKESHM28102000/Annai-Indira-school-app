@@ -43,16 +43,29 @@ const Card = ({ icon, title, desc }) => (
 
 /* -------- EVENTS -------- */
 const events = [
-  { name: "Colouring", date: "April 10" },
-  { name: "Musical Chair", date: "April 15" },
-  { name: "Vegetable Day", date: "April 18" },
-  { name: "Rhymes Telling", date: "April 20" },
-  { name: "Fruits Day", date: "April 25" },
-  { name: "Alphabet Game", date: "May 1" },
-  { name: "Fancy Dress", date: "May 5" },
-  { name: "Drawing Competition", date: "May 10" },
-  { name: "Story Telling", date: "May 12" },
-  { name: "Yoga Day", date: "June 1" },
+  { name: "Colouring"},
+  { name: "Musical Chair" },
+  { name: "Vegetable Day" },
+  { name: "Rhymes Telling"},
+  { name: "Fruits Day"},
+  { name: "Alphabet Game"},
+  { name: "Fancy Dress"},
+  { name: "Drawing Competition" },
+  { name: "Story Telling" },
+  { name: "Yoga Day"},
+  { name: "English Reading"},
+  { name: "English Story Narration" },
+  { name: "English Creative Writing" },
+  { name: "Tamil Reading"},
+  { name: "Tamil Poem Recitation"},
+  { name: "Tamil Essay Writing"},
+  { name: "Tamil Handwriting"},
+  { name: "Hindi Story Telling" },
+  { name: "Hindi Rhymes recitation" },
+  { name: "Hindi Essay Writing"},
+  { name: "Hindi Handwriting"},
+  { name: "Quiz"},
+  { name: "Thirukkural recitation"},
 ];
 
 export default function Home() {
@@ -81,7 +94,7 @@ export default function Home() {
   }, []);
 
   return (<><>
-    <div className="w-full min-h-screen text-white overflow-x-hidden pt-20">
+    <div className="w-full min-h-screen text-white overflow-x-hidden">
 
       {/* HERO */}
       <section className="relative w-full h-screen">
@@ -98,7 +111,7 @@ export default function Home() {
         </video>
 
         {/* OVERLAY */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0"></div>
 
         {/* CONTENT */}
         <div className="relative z-10 w-full h-full flex items-center px-4 sm:px-6 md:px-10">
@@ -145,7 +158,7 @@ export default function Home() {
 
             {/* RIGHT MARQUEE */}
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 
-            h-[250px] sm:h-[300px] overflow-hidden">
+            h-[250px] sm:h-[300px] overflow-hidden ring-1 ring-yellow-300 ">
 
               <h3 className="text-center font-semibold mb-3 text-sm md:text-base">
                 Upcoming Events
@@ -163,7 +176,6 @@ export default function Home() {
                     hover:bg-white/20 transition"
                   >
                     <p className="font-semibold text-sm">{event.name}</p>
-                    <p className="text-xs text-gray-300">{event.date}</p>
                   </div>
                 ))}
               </div>
@@ -215,7 +227,7 @@ export default function Home() {
           <Stat value="1000+" label="Books" />
         </div>
       </section>
-      <section data-aos="zoom-in" className="text-center bg-gradient-to-r from-[#36064D] to-[#552586] py-16 px-6 rounded-2xl" > <h2 className="text-2xl md:text-4xl font-bold mb-4"> Admissions Open </h2> <p className="text-gray-200 mb-6 text-sm md:text-base"> Join us today and shape your child’s future with quality education </p> <NavLink to="/contact" className="inline-block px-8 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-[#7F00FF] to-[#E100FF] hover:scale-110 hover:shadow-xl transition duration-300"> Join Us Today! </NavLink> </section>
+      <section data-aos="zoom-in" className="text-center bg-gradient-to-r from-[#552586] to-[#36064D] py-16 px-6 rounded-2xl" > <h2 className="text-2xl md:text-4xl font-bold mb-4"> Admissions Open </h2> <p className="text-gray-200 mb-6 text-sm md:text-base"> Join us today and shape your child’s future with quality education </p> <NavLink to="/contact" className="inline-block px-8 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-[#7F00FF] to-[#E100FF] hover:scale-110 hover:shadow-xl transition duration-300"> Join Us Today! </NavLink> </section>
 
     </div>
     </>

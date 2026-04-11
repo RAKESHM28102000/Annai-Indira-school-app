@@ -257,15 +257,9 @@ and grow with confidence."
   <img
     src="/images/teachers.jpg"
     alt="Principal"
-    className="
-      w-full 
-      max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px]
-      aspect-[3/4] object-cover
-      rounded-2xl 
-      shadow-2xl 
-      ring-2 ring-pink-500
-      transition duration-500 
-      hover:scale-105
+    className="w-full max-w-[280px] min-h-44 md:min-h-80 sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px] object-contain
+      rounded-2xl shadow-2xl ring-2 ring-pink-500 object-cover 
+      transition duration-500 hover:scale-105
     "
   />
 </div>

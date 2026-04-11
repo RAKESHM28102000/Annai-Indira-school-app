@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -8,6 +8,31 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const text = `Hello Annai Indira School,%0A
+Name: ${form.name}%0A
+Phone: ${form.phone}%0A
+Email: ${form.email}%0A
+Message: ${form.message}`;
+
+    const whatsappURL = `https://wa.me/919715094250?text=${text}`;
+
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <div className="min-h-screen pt-20 bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white px-4 py-16">
 
@@ -24,10 +49,10 @@ export default function Contact() {
       {/* GRID */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-        {/* CONTACT INFO */}
+        {/* LEFT SIDE (UNCHANGED) */}
         <div className="space-y-6">
 
-          <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl transition duration-300">
+          <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl transition">
             <div className="flex items-center gap-3">
               <FaMapMarkerAlt className="text-cyan-400 text-xl" />
               <h3 className="text-lg font-semibold">Address</h3>
@@ -35,18 +60,9 @@ export default function Contact() {
             <p className="text-gray-300 mt-2">
               6/86, Annai Indira School, Ramapuram Post, Tiruchengode Tk, Namakkal District, Tamil Nadu - 637202
             </p>
-
-            <a
-              href="https://www.google.com/maps/search/Annai%20Indira%20School/@11.43889214,78.00003142,17z"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block mt-3 text-cyan-400 hover:underline"
-            >
-              View on Google Maps
-            </a>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl transition duration-300">
+          <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg">
             <div className="flex items-center gap-3">
               <FaEnvelope className="text-pink-400 text-xl" />
               <h3 className="text-lg font-semibold">Email</h3>
@@ -56,7 +72,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl transition duration-300">
+          <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg">
             <div className="flex items-center gap-3">
               <FaPhoneAlt className="text-green-400 text-xl" />
               <h3 className="text-lg font-semibold">Phone</h3>
@@ -65,30 +81,32 @@ export default function Contact() {
             <p className="text-gray-300">+91 94435 57045</p>
           </div>
 
-          {/* FEEDBACK */}
-          <div className="p-6 rounded-2xl bg-gradient-to-r from-purple-500/20 to-cyan-500/20 backdrop-blur-lg shadow-lg hover:shadow-2xl transition duration-300">
+          <div className="p-6 rounded-2xl bg-gradient-to-r from-purple-500/20 to-cyan-500/20 backdrop-blur-lg shadow-lg">
             <h3 className="text-lg font-semibold mb-2">Parent Feedback</h3>
             <p className="text-gray-300">
-              We welcome feedback and suggestions from parents to improve our school experience.
+              We welcome feedback and suggestions from parents.
             </p>
           </div>
         </div>
 
-        {/* CONTACT FORM */}
-        <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl transition duration-300">
+        {/* RIGHT SIDE FORM */}
+        <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg">
 
           <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Send Message
           </h2>
 
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handleSubmit}>
 
             {/* Name */}
             <div className="flex items-center gap-3 bg-white/5 p-3 rounded-lg">
               <FaUser className="text-gray-400" />
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
+                required
+                onChange={handleChange}
                 className="w-full bg-transparent outline-none text-white"
               />
             </div>
@@ -96,14 +114,19 @@ export default function Contact() {
             {/* Phone */}
             <input
               type="text"
+              name="phone"
               placeholder="Phone"
+              required
+              onChange={handleChange}
               className="w-full p-3 rounded-lg bg-white/5 outline-none text-white"
             />
 
             {/* Email */}
             <input
               type="email"
+              name="email"
               placeholder="Email"
+              onChange={handleChange}
               className="w-full p-3 rounded-lg bg-white/5 outline-none text-white"
             />
 
@@ -111,8 +134,11 @@ export default function Contact() {
             <div className="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
               <FaCommentDots className="text-gray-400 mt-2" />
               <textarea
+                name="message"
                 placeholder="Message"
                 rows="4"
+                required
+                onChange={handleChange}
                 className="w-full bg-transparent outline-none text-white"
               ></textarea>
             </div>
@@ -120,9 +146,9 @@ export default function Contact() {
             {/* Button */}
             <button
               type="submit"
-              className="w-full py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 hover:scale-105 hover:shadow-xl transition duration-300 font-semibold"
+              className="w-full py-3 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 hover:scale-105 hover:shadow-xl transition font-semibold"
             >
-              Send Message
+              Send via WhatsApp
             </button>
 
           </form>
