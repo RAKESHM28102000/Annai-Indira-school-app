@@ -98,7 +98,7 @@ export default function About() {
         className="relative h-[80vh] flex items-center justify-center text-center px-4"
         style={{
           backgroundImage:
-            "url('/images/bg5.jpg')",
+            "url('/images/pencil-ill-bg.jpg')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",
