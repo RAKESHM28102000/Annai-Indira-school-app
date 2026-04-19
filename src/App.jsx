@@ -71,7 +71,7 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen overflow-hidden bg-gradient-to-br from-[#36064D] via-[#1a0526] to-black text-white flex flex-col">
+      <div className="min-h-screen overflow-hidden bg-[#1a0526] text-white flex flex-col">
 
         <Navbar />
 
